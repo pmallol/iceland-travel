@@ -8,8 +8,10 @@
 /* Body and background */
 body {
   --true-blue: #0062e0;
-  font-family: 'Arial', sans-serif;
+  font-family: "League Spartan", 'Arial', sans-serif;
   font-size: 16px;
+  font-optical-sizing: auto;
+  font-style: normal;
   background-color: #fff;
   color: #000;
   display: flex;
