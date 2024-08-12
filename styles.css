@@ -25,6 +25,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 2.5rem;
+  margin: 22px 0;
 }
 
 h3 {
@@ -66,6 +67,10 @@ h3 {
   flex: 0 0 505px;
 }
 
+.right-section h1 {
+  max-width: 18ch;
+}
+
 .steps-container {
   display: flex;
   flex-direction: column;
@@ -74,7 +79,7 @@ h3 {
 
 /* Individual step */
 .step {
-  padding: 23px 15px;
+  padding: 14px 17px;
   display: flex;
   align-items: center;
   cursor: pointer;

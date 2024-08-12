@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById(`step${stepNumber}-content`).style.display =
         'block';
 
-      document.getElementById('mainImage').src = `step${stepNumber}.jpg`;
+      document.getElementById('mainImage').src = `assets/images/step${stepNumber}.jpg`;
     });
   });
 });
