@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Body and background */
 body {
   --true-blue: #0062e0;
@@ -85,10 +90,9 @@ h3 {
   display: flex;
   align-items: center;
   cursor: pointer;
+  border: transparent solid 3px;
+  border-radius: 6px;
   gap: 23px;
-}
-
-.step:hover {
 }
 
 .step-circle {
@@ -105,33 +109,49 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border 175ms ease, color 175ms ease, scale 175ms ease;
 }
 
 .step-description h2 {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.38rem;
+  overflow: hidden;
+  background: linear-gradient(to right, var(--true-blue), var(--true-blue) 50%, #1a1a1a 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+.step:hover .step-description h2 {
+  background-position: 0 100%;
+}
+
+.step:hover .step-circle {
+  border: var(--true-blue) solid 1px;
+  color: var(--true-blue);
 }
 
 /* Active state for selected step */
 .step.active {
   background: linear-gradient(#fff 0 0) padding-box,
     linear-gradient(to right, var(--true-blue), #0094ff) border-box;
-  gap: 17px;
+  gap: 19px;
   padding: 14px 17px;
-  border: transparent solid 3px;
-  border-radius: 6px;
 }
 
 .step.active .step-circle {
-  --circle-size: 50px;
+  transform: scale(1.25);
   background: linear-gradient(#0094ff, var(--true-blue));
   color: #fff;
   border: none;
 }
 
-.step.active .step-description {
-  color: var(--true-blue);
+.step.active .step-description h2 {
+  background-position: 0 100%;
 }
 
 /* Step content section */
@@ -152,7 +172,7 @@ h3 {
 }
 
 /* Responsive design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .container {
     flex-direction: column-reverse;
     width: 90%;
@@ -165,9 +185,5 @@ h3 {
 
   .left-section {
     display: none;
-  }
-
-  .right-section {
-    border-radius: 0 0 10px 10px;
   }
 }
