@@ -45,7 +45,7 @@ h3 {
   background-color: #fff;
   width: 80%;
   max-width: 1200px;
-  min-height: 580px;
+  min-height: 605px;
   overflow: hidden;
   display: flex;
   gap: 40px;
@@ -93,6 +93,7 @@ h3 {
   border: transparent solid 3px;
   border-radius: 6px;
   gap: 23px;
+  transition: background 275ms ease, padding 275ms ease, gap 275ms ease;
 }
 
 .step-circle {
@@ -139,8 +140,7 @@ h3 {
 .step.active {
   background: linear-gradient(#fff 0 0) padding-box,
     linear-gradient(to right, var(--true-blue), #0094ff) border-box;
-  gap: 19px;
-  padding: 14px 17px;
+  padding: 14px 23px;
 }
 
 .step.active .step-circle {
