@@ -66,6 +66,8 @@ h3 {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px 0 0 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 }
 
 /* Right side - Steps */

@@ -30,9 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('active');
       activateStep(this);
 
-      document.getElementById(
+      const image = document.getElementById(
         'mainImage'
-      ).src = `assets/images/step${this.getAttribute('data-step')}.jpg`;
+      )
+      image.style.opacity = '0';
+      setTimeout(() => {
+        image.src = `assets/images/step${this.getAttribute('data-step')}.jpg`;
+        image.style.opacity = '1';
+      }, 300);
     });
   });
 });
