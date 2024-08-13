@@ -8,7 +8,7 @@
 /* Body and background */
 body {
   --true-blue: #0062e0;
-  font-family: "League Spartan", 'Arial', sans-serif;
+  font-family: 'League Spartan', 'Arial', sans-serif;
   font-size: 16px;
   font-optical-sizing: auto;
   font-style: normal;
@@ -83,7 +83,7 @@ h3 {
 
 /* Individual step */
 .step {
-  padding: 14px 17px;
+  padding: 14px 23px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -117,7 +117,11 @@ h3 {
 
 /* Active state for selected step */
 .step.active {
-  border: var(--true-blue) solid 3px;
+  background: linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(to right, var(--true-blue), #0094ff) border-box;
+  gap: 17px;
+  padding: 14px 17px;
+  border: transparent solid 3px;
   border-radius: 6px;
 }
 
