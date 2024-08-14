@@ -43,9 +43,10 @@ h3 {
 /* Container for the entire page */
 .container {
   background-color: #fff;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   min-height: 605px;
+  margin: 10vh 7vw;
   overflow: hidden;
   display: flex;
   gap: 40px;
@@ -55,6 +56,7 @@ h3 {
 .left-section {
   flex: 1 1 auto;
   background-color: #f2f4ff;
+  padding: min(5%, 30px);
   margin: 10px 0;
   border-radius: 6px;
   display: flex;

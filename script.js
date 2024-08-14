@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('active');
       activateStep(this);
 
-      const image = document.getElementById(
-        'mainImage'
-      )
-      image.style.opacity = '0';
+      const mainImage = document.getElementById('mainImage');
+      const sourceImage = document.getElementById('sourceImage');
+      mainImage.style.opacity = '0';
       setTimeout(() => {
-        image.src = `assets/images/step${this.getAttribute('data-step')}.jpg`;
-        image.style.opacity = '1';
+        sourceImage.srcset = `assets/images/step${this.getAttribute('data-step')}.webp`;
+        mainImage.src = `assets/images/step${this.getAttribute('data-step')}.svg`;
+        mainImage.style.opacity = '1';
       }, 300);
     });
   });
