@@ -6,6 +6,9 @@ function activateStep(activeStep) {
   stepNumberContent.style.visibility = 'visible';
   stepNumberContent.style.opacity = '1';
   stepNumberContent.style.height = 'auto';
+
+  const activeSvg = document.getElementById(`svg${stepNumber}`);
+  activeSvg.style.opacity = '1';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -27,17 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
         content.style.height = '0';
       });
 
+      const svgImages = document.querySelectorAll('.svg');
+      svgImages.forEach((svg) => {
+        svg.style.opacity = '0';
+      });
+
       this.classList.add('active');
       activateStep(this);
-
-      const mainImage = document.getElementById('mainImage');
-      const sourceImage = document.getElementById('sourceImage');
-      mainImage.style.opacity = '0';
-      setTimeout(() => {
-        sourceImage.srcset = `assets/images/step${this.getAttribute('data-step')}.webp`;
-        mainImage.src = `assets/images/step${this.getAttribute('data-step')}.svg`;
-        mainImage.style.opacity = '1';
-      }, 300);
     });
   });
 });

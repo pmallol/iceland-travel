@@ -45,10 +45,10 @@ h3 {
   background-color: #fff;
   width: 100%;
   max-width: 1200px;
-  min-height: 605px;
-  margin: 10vh 7vw;
+  margin: 7vh 7vw;
   overflow: hidden;
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
@@ -56,25 +56,41 @@ h3 {
 .left-section {
   flex: 1 1 auto;
   background-color: #f2f4ff;
-  padding: min(5%, 30px);
+  height: 566px;
   margin: 10px 0;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.left-section img {
+.left-section object {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-section object {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: min(5%, 30px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.left-section object img {
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px 0 0 10px;
-  opacity: 1;
   transition: opacity 0.5s ease-in;
 }
 
 /* Right side - Steps */
 .right-section {
   background-color: #fff;
+  min-height: 605px;
   flex: 0 0 505px;
 }
 

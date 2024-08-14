@@ -24,16 +24,18 @@
   <body>
     <main class="container">
       <section class="left-section">
-        <figure>
-          <picture>
-            <source id="sourceImage" srcset="assets/images/step1.webp" type="image/webp">
-            <img
-              id="mainImage"
-              src="assets/images/step1.svg"
-              alt="Step Image"
-            />
-          </picture>
-        </figure>
+          <object class="svg" id="svg1" data="assets/images/step1.svg" type="image/svg+xml">
+            <img src="assets/images/step1.webp" />
+          </object>
+          <object class="svg" id="svg2" data="assets/images/step2.svg" type="image/svg+xml">
+            <img src="assets/images/step2.webp" />
+          </object>
+          <object class="svg" id="svg3" data="assets/images/step3.svg" type="image/svg+xml">
+            <img src="assets/images/step3.webp" />
+          </object>
+          <object class="svg" id="svg4" data="assets/images/step4.svg" type="image/svg+xml">
+            <img src="assets/images/step4.webp" />
+          </object>
       </section>
 
       <section class="right-section">
